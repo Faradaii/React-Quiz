@@ -2,6 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes fadeInButton {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+@keyframes fadeInQuestion {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.fade-in-bottom {
+  animation: fadeInButton 0.5s ease-out;
+}
+
+.fade-in-top {
+  animation: fadeInQuestion 0.5s ease-out;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
