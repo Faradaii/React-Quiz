@@ -18,6 +18,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        dotTone: '#f0fdf4',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
