@@ -20,10 +20,10 @@ function ResultPage() {
 
     return (
         <section className="flex flex-col justify-center items-center h-screen">
-            <section className="h-3/5 w-2/4 m-auto flex flex-col items-center">
-                <h3 className={`font-bold text-3xl text-center w-2/4 mx-auto ${animate ? 'fade-in-top' : ''}`}>Quiz Telah Berakhir!</h3>
-                <div className="flex flex-col gap-2 w-2/4 m-auto">
-                    <table className="table-auto w-3/4 m-auto grow border-gray-300">
+            <section className="h-3/5 md:w-2/4 m-auto flex flex-col items-center">
+                <h3 className={`font-bold text-3xl text-center mx-auto ${animate ? 'fade-in-top' : ''}`}>Quiz Telah Berakhir!</h3>
+                <div className="flex flex-col gap-2 m-auto">
+                    <table className="table-auto m-auto grow border-gray-300">
                         <tbody>
                             <tr>
                                 <td className={`px-4 py-2 text-lg font-base ${animate ? 'fade-in-bottom' : ''}`}>Jawaban Benar</td>
@@ -40,7 +40,7 @@ function ResultPage() {
                         </tbody>
                     </table>
                 </div>
-                <Button variant={'outline'} className="w-1/4 rounded-full" onClick={clearQuiz}>Akhiri Quiz</Button>
+                <Button variant={'outline'} className="md:w-1/4 rounded-full" onClick={clearQuiz}>Akhiri Quiz</Button>
             </section>
         </section>
     );

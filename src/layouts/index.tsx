@@ -10,11 +10,11 @@ function Layout({ user, logoutHandler }: {user: User | null, logoutHandler: () =
         <div className="h-screen overflow-auto flex flex-col items-center gap-5 bg-transparent text-white">
             <header className="fixed top-0 z-40 w-full ">
                 <div className="opacity-90 pt-6 mb-3">
-                    <div className="flex sm:flex-row flex-nowrap flex-col sm:gap-6 mt-4 sm:mt-0 text-xl px-10 text-center">
-                        <div className="pb-4 col-span-7 sm:text-start text-center sm:grow grow-0">
+                    <div className={`flex flex-nowrap ${user === null ? 'justify-center' : 'justify-between'} sm:gap-6 mt-4 sm:mt-0 text-xl px-10 text-center`}>
+                        <div className={`pb-4 col-span-7 ${user === null ? 'text-center' : ''} text-start`}>
                             <h1 className="text-2xl font-bold">Re-Quizy</h1>
                         </div>
-                        <div className="flex sm:flex-row flex-wrap sm:gap-8">
+                        <div className="">
                             {   user !== null && 
                             <>
                                 <DropdownMenu>
@@ -38,7 +38,7 @@ function Layout({ user, logoutHandler }: {user: User | null, logoutHandler: () =
                     </div>
                 </div>
             </header>
-            <main className="w-full grow bg-black text-white">
+            <main className="w-full grow bg-black text-white h-full">
                 <Outlet />
             </main>
         </div>

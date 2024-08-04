@@ -27,10 +27,10 @@ function LoginPage({logInHandler}:LogInHandler) {
     }
 
     return (
-        <div className="w-screen grid md:grid-cols-2 h-screen">
-            <div className="w-4/6 h-4/6 m-auto flex flex-col max-md:w-5/6 max-md:h-5/6">
-                <img src={QuizWelcome} className="m-auto md:w-5/6 md:h-5/6" />
-                <p className="text-center text-gray-500 max-md:hidden">Coba asah kemampuanmu akan pengetahuan tertentu dan tunjukan hasilnya di dalam Re-quizy!</p>
+        <div className="w-screen grid md:grid-cols-2 gap-3 max-md:flex flex-col items-end h-screen max-md:h-fit max-md:absolute bottom-0 py-10">
+            <div className="m-auto flex flex-col max-md:w-full w-4/6 max-md:h-fit">
+                <img src={QuizWelcome} className="m-auto md:w-5/6 md:h-5/6 w-2/4" />
+                <p className="text-center text-gray-500 w-3/4 m-auto max-md:hidden">Coba asah kemampuanmu akan pengetahuan tertentu dan tunjukan hasilnya di dalam Re-quizy!</p>
             </div>
             <form className="m-auto" onSubmit={onsubmitHandler}>
                 <Card className="mx-auto my-auto max-w-sm max-sm:max-w-xs max-md:border-none">
