@@ -71,13 +71,13 @@ function QuizPage() {
         <section className="flex flex-col justify-center items-center h-screen">
         {currentQuestion ? (
             <section className="h-3/4 w-3/4 m-auto flex flex-col" key={currentQuestion.question}>
-                <div className="absolute top-3 left-1/2 -translate-x-1/2">
+                <div className="md:absolute top-3 md:left-1/2 md:-translate-x-1/2">
                     <h2 className="font-medium text-xl text-center">Time Remaining</h2>
                     <h2 className="font-medium text-xl text-center">{numToTime(countdown)}</h2>
                 </div>
                 <div className="flex flex-col justify-evenly grow">
-                    <h3 className={`font-bold text-lg text-center w-2/4 mx-auto my-10 grow ${animate ? 'fade-in-top' : ''}`}>{decodeBase64(currentQuestion?.question)}</h3>
-                    <div className="flex flex-col gap-2 w-2/4 m-auto">
+                    <h3 className={`font-bold text-lg text-center md:w-2/4 w-full mx-auto my-10 grow ${animate ? 'fade-in-top' : ''}`}>{decodeBase64(currentQuestion?.question)}</h3>
+                    <div className="flex flex-col gap-2 md:w-2/4 w-full m-auto">
                         {
                             shuffledAnswers.map(
                                 (answer: string, index: number) => 
