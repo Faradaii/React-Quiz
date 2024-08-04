@@ -71,7 +71,7 @@ function QuizPage() {
         <section className="flex flex-col justify-center items-center h-screen">
         {currentQuestion ? (
             <section className="h-3/4 w-3/4 m-auto flex flex-col" key={currentQuestion.question}>
-                <div className="md:absolute top-3 md:left-1/2 md:-translate-x-1/2">
+                <div className="absolute top-3 left-1/2 -translate-x-1/2">
                     <h2 className="font-medium text-xl text-center">Time Remaining</h2>
                     <h2 className="font-medium text-xl text-center">{numToTime(countdown)}</h2>
                 </div>
