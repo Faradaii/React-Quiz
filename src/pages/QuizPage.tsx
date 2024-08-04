@@ -88,7 +88,10 @@ function QuizPage() {
                         }
                         <Button className={animate ? 'fade-in-bottom' : ''} variant={'outline'} onClick={() => updateAnswerHandler(null)}>{"I Don't Know"}</Button>
                     </div>
-                    <h5 className="font-semibold text-md text-center mt-10">Question {count + 1} of {quiz.length}</h5>
+                    <div className="mt-10">
+                        <h5 className="font-semibold text-md text-center">Question {count + 1} of {quiz.length}</h5>
+                        <h5 className="font-semibold text-md text-center mt-10">Number of Questions Completed : {count} </h5>
+                    </div>
                 </div>
             </section>
         ) : (
