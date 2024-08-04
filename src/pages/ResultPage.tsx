@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { useQuizStore } from "@/stores/store";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import finishmusic from "../assets/finishmusic.mp3";
 
 function ResultPage() {
     const { quiz, countAnswers, countCorrectAnswers, countIncorrectAnswers, clearQuiz } = useQuizStore((state) => ({ quiz: state.quiz, countAnswers: state.countAnswers, countCorrectAnswers: state.countCorrectAnswers, countIncorrectAnswers: state.countIncorrectAnswers, clearQuiz: state.clearQuiz}));
@@ -20,6 +21,7 @@ function ResultPage() {
 
     return (
         <section className="flex flex-col justify-center items-center h-screen">
+        <audio autoPlay src={finishmusic} muted={false}></audio>
             <section className="h-3/5 md:w-2/4 m-auto flex flex-col items-center">
                 <h3 className={`font-bold text-3xl text-center mx-auto ${animate ? 'fade-in-top' : ''}`}>Quiz Telah Berakhir!</h3>
                 <div className="flex flex-col gap-2 m-auto">
