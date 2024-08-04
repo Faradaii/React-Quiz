@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
+import { PasswordInput } from '@/components/ui/passwordInput';
 import {QuizWelcome} from '@/lib/image';
 import { LogInHandler } from '@/types';
 import { Label } from '@radix-ui/react-label';
@@ -41,11 +42,11 @@ function LoginPage({logInHandler}:LogInHandler) {
                         <div className="space-y-4">
                             <div className="space-y-2">
                                 <Label htmlFor="email">Email</Label>
-                                <Input id="email" type="email" placeholder="m@example.com" onChange={(e) => setEmail(e.target.value)} value={email} required />
+                                <Input id="email" type="email" placeholder="myemail@example.com" onChange={(e) => setEmail(e.target.value)} value={email} required />
                             </div>
                             <div className="space-y-2">
                                 <Label htmlFor="password">Password</Label>
-                                <Input id="password" type="password" onChange={(e) => setPass(e.target.value)} value={pass} required />
+                                <PasswordInput id="password" placeholder="••••••••" onChange={(e) => setPass(e.target.value)} value={pass} required />
                             </div>
                             <Button type="submit" className="w-full" variant={"dotTone"}>
                                 Login
