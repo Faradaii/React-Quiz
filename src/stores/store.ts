@@ -20,7 +20,7 @@ const useQuizStore = create<QuizState>()(
     (set, get) => ({
       quiz: [],
       timer: 0,
-      setQuiz: (quiz: Quiz[]) => set({ quiz, timer: 300 }),
+      setQuiz: (quiz: Quiz[]) => set({ quiz, timer: 120 }),
       setTimer: (timer: number) => set({ timer }),
       updateQuiz: (updatedQuiz: Quiz) => set({
         quiz: get()?.quiz?.map((q: Quiz) => q.question == updatedQuiz.question ? updatedQuiz : q)
