@@ -4,6 +4,7 @@ import { Quiz } from "@/types";
 import { decodeBase64, numToTime, shuffleArray } from "@/utils";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import quizMusic from "../assets/quizmusic.mp3";
 
 function QuizPage() {
     const [ count, setCount ] = useState(0);
@@ -69,6 +70,7 @@ function QuizPage() {
 
     return (
         <section className="flex flex-col justify-center items-center h-screen">
+        <audio autoPlay src={quizMusic} loop={true} muted={false}></audio>
         {currentQuestion ? (
             <section className="h-3/4 w-3/4 m-auto flex flex-col" key={currentQuestion.question}>
                 <div className="absolute top-3 left-1/2 -translate-x-1/2">
