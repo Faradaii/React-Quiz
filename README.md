@@ -1,4 +1,5 @@
-# React + TypeScript + Vite
+# Re-quizy
+<img width="1920" alt="requizy-landscape" src="https://github.com/user-attachments/assets/2b1d8097-4818-4885-80b7-ba785b4a0209">
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
